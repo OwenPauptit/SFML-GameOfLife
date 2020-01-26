@@ -1,5 +1,5 @@
 # SFML-GameOfLife
-A simulation of Conway's Game of Life
+This program is a simulation of Conway's Game of Life using SFML.
 
 Conway's game of life is a zero player game, which takes a single input, then computes the following generations. It consists of a grid of cells which can either be alive or dead. When the next generation is calculated, the cells live or die depending on 3 rules:
 
