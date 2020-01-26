@@ -6,6 +6,7 @@
 
 #include "StateManager.hpp"
 #include "InputManager.hpp"
+#include "DEFINITIONS.hpp"
 
 namespace Aesel {
 	
@@ -22,7 +23,7 @@ namespace Aesel {
 		Game(int width, int height, std::string title);
 
 	private:
-		const float dt = 1.0f / 60.0f;
+		const float dt = 1.0f / FRAME_RATE;
 
 		sf::Clock _clock;
 

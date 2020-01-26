@@ -1,2 +1,7 @@
-﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\owenp\source\repos\Game Of Life\Game Of Life\Debug\Game Of Life.exe : fatal error LNK1120: 1 unresolved externals
+﻿  GameState.cpp
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\GameState.cpp(13,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\GameState.cpp(21,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\GameState.cpp(21,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\GameState.cpp(32,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\GameState.cpp(32,33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Game Of Life.vcxproj -> C:\Users\owenp\source\repos\Game Of Life\GOL\Debug\Game Of Life.exe

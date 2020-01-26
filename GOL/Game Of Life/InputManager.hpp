@@ -8,7 +8,7 @@ namespace Aesel {
 		InputManager();
 
 		bool isSpriteClicked(sf::Sprite sprite, sf::Mouse::Button button, sf::RenderWindow& window);
+		bool isClick(sf::Mouse::Button button, sf::RenderWindow& window);
 
-		sf::Vector2i getMousePosition(sf::RenderWindow& window);
 	};
 }

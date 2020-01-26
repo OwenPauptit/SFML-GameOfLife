@@ -2,6 +2,10 @@
 
 namespace Aesel {
 
+	InputManager::InputManager() {
+
+	}
+
 	// returns true if mouse is inside sprite's IntRect
 	bool InputManager::isSpriteClicked(sf::Sprite sprite, sf::Mouse::Button button, sf::RenderWindow& window) {
 		if (sf::Mouse::isButtonPressed(button)) {
@@ -9,6 +13,13 @@ namespace Aesel {
 			if (rect.contains(sf::Mouse::getPosition(window))) {
 				return true;
 			}
+		}
+		return false;
+	}
+
+	bool InputManager::isClick(sf::Mouse::Button button, sf::RenderWindow& window) {
+		if (sf::Mouse::isButtonPressed(button)) {
+			return true;
 		}
 		return false;
 	}
