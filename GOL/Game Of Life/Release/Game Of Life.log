@@ -1,0 +1,35 @@
+﻿  Cell.cpp
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(6,37): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(6,30): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(7,37): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(7,34): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Game.cpp
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,149): warning C4244: 'argument': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GameState.cpp
+  main.cpp
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\main.cpp(5,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\main.cpp(5,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating code
+  1 of 351 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Game Of Life.vcxproj -> C:\Users\owenp\source\repos\Game Of Life\GOL\Release\Game Of Life.exe

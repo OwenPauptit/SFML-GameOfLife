@@ -11,6 +11,8 @@
 
 #define FRAME_RATE 12.0f
 
+#define GOSPER_GLIDER_GUN_FILEPATH "Resources/Presets/GosperGliderGun.txt"
+
 enum CellState {
 	eAlive,
 	eDead

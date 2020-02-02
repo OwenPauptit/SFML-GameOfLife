@@ -2,43 +2,103 @@
 #include "DEFINITIONS.hpp"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
+#include <sstream>
+#include <string>
 
 namespace Aesel {
 
-	GameState::GameState(GameDataRef data, int gridWidth, int gridHeight, int cellWidth, int cellHeight) :_data(data), _gridWidth(gridWidth), _gridHeight(gridHeight), _cellWidth(cellWidth), _cellHeight(cellHeight){
+	GameState::GameState(GameDataRef data, int gridWidth, int gridHeight, int cellWidth, int cellHeight, int seed, std::string fileName) :_data(data), _gridWidth(gridWidth), _gridHeight(gridHeight), _cellWidth(cellWidth), _cellHeight(cellHeight), _seed(seed), _fileName(fileName){
 		
 	}
 
 	void GameState::Init() {
-		srand(time(0));
-		int x, y;
-		for (int r = 0; r < _gridWidth + 2; r++) {
 
-			y = _data->window.getSize().y / _gridHeight * r - _cellHeight;
-			_row.clear();
-			for (int c = 0; c < _gridHeight + 2; c++) {
-				x = _data->window.getSize().x / _gridWidth * c - _cellWidth;
-				_tempCell = new Cell(_data, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, x, y, RandomState());
-				_row.push_back(std::move(_tempCell));
+		int x, y;
+
+		if (_fileName != "") {
+
+			std::ifstream file;
+			file.open(_fileName);
+			if (!file.is_open()) {
+				std::cout << "File couldn't open" << std::endl;
 			}
-			_cells.push_back(_row);
+
+			else {
+
+				std::string line;
+				int n, l; 
+
+				for (int r = 0; r < _gridWidth + 2; r++) {
+					line = "";
+					if (!std::getline(file, line)) {
+						line = "";
+					}
+
+					std::cout << line << std::endl;
+					l = line.length();
+
+					y = _data->window.getSize().y / _gridHeight * r - _cellHeight;
+					_row.clear();
+
+					for (int c = 0; c < _gridHeight + 2; c++) {
+
+						if (c < l) {
+							n = line[c] - '0';
+
+						}
+						else {
+							n = 0;
+						}
+
+
+						x = _data->window.getSize().x / _gridWidth * c - _cellWidth;
+
+						_tempCell = new Cell(_data, _cellWidth, _cellHeight, x, y, IntToState(n));
+
+						_row.push_back(std::move(_tempCell));
+
+					}
+
+					_cells.push_back(_row);
+				}
+				file.close();
+			}
+		}
+		else{
+
+			srand(_seed);
+			for (int r = 0; r < _gridWidth + 2; r++) {
+				y = _data->window.getSize().y / _gridHeight * r - _cellHeight;
+				_row.clear();
+				for (int c = 0; c < _gridHeight + 2; c++) {
+					x = _data->window.getSize().x / _gridWidth * c - _cellWidth;
+					_tempCell = new Cell(_data, _cellWidth, _cellHeight, x, y, RandomState());
+					_row.push_back(std::move(_tempCell));
+				}
+				_cells.push_back(_row);
+			}
+			
 		}
 		for (int r = 0; r < _gridWidth + 2; r++) {
-
 			y = _data->window.getSize().y / _gridHeight * r - _cellHeight;
 			_row.clear();
 			for (int c = 0; c < _gridHeight + 2; c++) {
 				x = _data->window.getSize().x / _gridWidth * c - _cellWidth;
-				_tempCell = new Cell(_data, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, x, y, CellState::eDead);
+				_tempCell = new Cell(_data, _cellWidth, _cellHeight, x, y, CellState::eDead);
 				_row.push_back(std::move(_tempCell));
 			}
 			_cells2.push_back(_row);
 		}
-
 	}
 
 	CellState GameState::RandomState() {
 		int n = rand() % 2;
+		return IntToState(n);
+		
+	}
+
+	CellState GameState::IntToState(int n) {
 		if (n == 1) {
 			return CellState::eAlive;
 		}

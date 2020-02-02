@@ -1,5 +1,6 @@
 #include "Game.hpp"
 #include "GameState.hpp"
+#include <string>
 
 namespace Aesel {
 
@@ -7,7 +8,7 @@ namespace Aesel {
 
 		_data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
 
-		_data->stateMGR.ChangeState(StateRef ( new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT)));
+		_data->stateMGR.ChangeState(StateRef ( new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, time(0),GOSPER_GLIDER_GUN_FILEPATH)));
 
 		this->Run();
 	}
