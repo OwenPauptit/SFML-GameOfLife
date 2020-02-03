@@ -1,35 +1,72 @@
-﻿  Cell.cpp
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(6,37): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+﻿  MainMenuState.cpp
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(35,135): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(6,30): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(36,135): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(7,37): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(37,135): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Cell.cpp(7,34): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(38,135): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
+          [
+              T=unsigned int
+          ]
+          and
           [
               T=float
           ]
-  Game.cpp
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,149): warning C4244: 'argument': conversion from 'time_t' to 'int', possible loss of data
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\Game.cpp(11,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  GameState.cpp
-  main.cpp
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\main.cpp(5,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\main.cpp(5,14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(39,139): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(40,131): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(55,149): warning C4244: 'argument': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(55,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(55,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(61,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(61,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(68,149): warning C4244: 'argument': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(68,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(68,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(74,149): warning C4244: 'argument': conversion from 'time_t' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(74,124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\owenp\source\repos\Game Of Life\GOL\Game Of Life\MainMenuState.cpp(74,104): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Generating code
-  1 of 351 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  74 of 482 functions (15.4%) were compiled, the rest were copied from previous compilation.
+    24 functions were new in current compilation
+    52 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Game Of Life.vcxproj -> C:\Users\owenp\source\repos\Game Of Life\GOL\Release\Game Of Life.exe

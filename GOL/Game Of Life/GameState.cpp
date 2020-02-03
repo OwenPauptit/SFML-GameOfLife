@@ -42,9 +42,14 @@ namespace Aesel {
 					_row.clear();
 
 					for (int c = 0; c < _gridHeight + 2; c++) {
-
 						if (c < l) {
-							n = line[c] - '0';
+							if (line[c] == 'O') {
+								n = 1;
+							}
+							else {
+								n = 0;
+							}
+							//n = line[c] - '0';
 
 						}
 						else {
@@ -108,7 +113,6 @@ namespace Aesel {
 	}
 
 	void GameState::HandleInput() {
-
 		sf::Event event;
 
 		while (_data->window.pollEvent(event)) {
@@ -117,15 +121,16 @@ namespace Aesel {
 				_data->window.close();
 			}
 
-			if (_data->inputMGR.isClick(sf::Mouse::Left, _data->window)) {
+			/*if (_data->inputMGR.isClick(sf::Mouse::Left, _data->window)) {
 				_proceed = true;
 			}
 			else {
 				_proceed = false;
-			}
+			}*/
+			_proceed = true;
 		}
 
-		
+
 	}
 
 	void GameState::Update(float dt) {
@@ -133,10 +138,9 @@ namespace Aesel {
 
 			_proceed = false;
 			int numAlive;
-			for (int y = 1; y < _gridHeight + 1; y++) {
-				for (int x = 1; x < _gridWidth + 1; x++) {
+			for (unsigned int y = 1; y < _gridHeight + 1; y++) {
+				for (unsigned int x = 1; x < _gridWidth + 1; x++) {
 					numAlive = 0;
-
 					// Row above
 					if (_cells[y - 1][x - 1]->getState() == CellState::eAlive) {
 						numAlive++;
@@ -165,6 +169,7 @@ namespace Aesel {
 						numAlive++;
 					}
 
+
 					if (_cells[y][x]->getState() == CellState::eAlive) {
 						if (numAlive < 2 || numAlive > 3) {
 							_cells2[y][x]->Die();
@@ -184,8 +189,8 @@ namespace Aesel {
 				}
 			}
 
-			for (int y = 0; y < _gridHeight + 2; y++) {
-				for (int x = 0; x < _gridWidth + 2; x++) {
+			for (unsigned int y = 0; y < _gridHeight + 2; y++) {
+				for (unsigned int x = 0; x < _gridWidth + 2; x++) {
 					if (_cells2[y][x]->getState() == CellState::eAlive){
 						_cells[y][x]->Birth();
 					}
@@ -195,12 +200,13 @@ namespace Aesel {
 				}
 			}
 		}
+
 	}
 
 	void GameState::Draw() {
 		_data->window.clear();
-		for (int y = 1; y < _gridHeight + 1; y++) {
-			for (int x = 1; x < _gridWidth + 1; x++) {
+		for (unsigned int y = 1; y < _gridHeight + 1; y++) {
+			for (unsigned int x = 1; x < _gridWidth + 1; x++) {
 				_cells[y][x]->Draw();
 			}
 		}

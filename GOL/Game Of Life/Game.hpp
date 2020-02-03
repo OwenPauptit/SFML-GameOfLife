@@ -6,6 +6,7 @@
 
 #include "StateManager.hpp"
 #include "InputManager.hpp"
+#include "AssetManager.hpp"
 #include "DEFINITIONS.hpp"
 
 namespace Aesel {
@@ -13,6 +14,7 @@ namespace Aesel {
 	struct GameData {
 		InputManager inputMGR;
 		StateManager stateMGR;
+		AssetManager assetMGR;
 		sf::RenderWindow window;
 	};
 
