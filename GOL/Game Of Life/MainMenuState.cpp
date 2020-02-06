@@ -39,6 +39,9 @@ namespace Aesel {
 		_fromFile.setPosition(sf::Vector2f(_data->window.getSize().x / 2 - _fromFile.getGlobalBounds().width / 2, _data->window.getSize().y * 6 / 8));
 		_exit.setPosition(sf::Vector2f(_data->window.getSize().x / 2 - _exit.getGlobalBounds().width / 2, _data->window.getSize().y * 7 / 8));
 
+		_selectRect.setSize(sf::Vector2f(_custom.getGlobalBounds().width, _custom.getGlobalBounds().height));
+		_selectRect.setFillColor(sf::Color::White);
+
 	}
 
 	void MainMenuState::HandleInput() {
@@ -52,15 +55,30 @@ namespace Aesel {
 			}
 
 			if (_data->inputMGR.isSpriteClicked(_random, sf::Mouse::Left, _data->window)) {
+
+				_selectRect.setPosition(_random.getPosition());
+				_data->window.draw(_selectRect);
+				_data->window.display();
+
 				_data->stateMGR.ChangeState(StateRef(new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, time(0),"")));
 			}
 			else if (_data->inputMGR.isSpriteClicked(_custom, sf::Mouse::Left, _data->window)) {
+
+				_selectRect.setPosition(_custom.getPosition());
+				_data->window.draw(_selectRect);
+				_data->window.display();
+
 				int n;
 				std::cout << "Enter seed: ";
 				std::cin >> n;
 				_data->stateMGR.ChangeState(StateRef(new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, n, "")));
 			}
 			else if (_data->inputMGR.isSpriteClicked(_preset, sf::Mouse::Left, _data->window)) {
+
+				_selectRect.setPosition(_preset.getPosition());
+				_data->window.draw(_selectRect);
+				_data->window.display();
+
 				std::string fileName;
 				std::cout << "Enter preset name: ";
 				std::cin >> fileName;
@@ -68,12 +86,22 @@ namespace Aesel {
 				_data->stateMGR.ChangeState(StateRef(new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, time(0), fileName)));
 			}
 			else if (_data->inputMGR.isSpriteClicked(_fromFile, sf::Mouse::Left, _data->window)) {
+
+				_selectRect.setPosition(_fromFile.getPosition());
+				_data->window.draw(_selectRect);
+				_data->window.display();
+
 				std::string fileName;
 				std::cout << "Enter file name: ";
 				std::cin >> fileName;
 				_data->stateMGR.ChangeState(StateRef(new GameState(_data, DEFAULT_GRID_WIDTH, DEFAULT_GRID_HEIGHT, DEFAULT_CELL_WIDTH, DEFAULT_CELL_HEIGHT, time(0), fileName)));
 			}
 			else if (_data->inputMGR.isSpriteClicked(_exit, sf::Mouse::Left, _data->window)) {
+
+				_selectRect.setPosition(_exit.getPosition());
+				_data->window.draw(_selectRect);
+				_data->window.display();
+
 				_data->window.close();
 			}
 

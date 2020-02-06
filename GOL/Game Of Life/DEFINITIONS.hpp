@@ -17,6 +17,8 @@
 #define MENU_PRESET_FILEPATH "Resources/Images/Main Menu/preset.png"
 #define MENU_FILE_FILEPATH "Resources/Images/Main Menu/fromfile.png"
 #define MENU_EXIT_FILEPATH "Resources/Images/Main Menu/exit.png"
+#define ENTER_SEED_FILEPATH "Resources/Images/Main Menu/enterSeed.png"
+#define ENTER_FILEPATH_FILEPATH "Resources/Images/Main Menu/enterFilePath.png"
 #define TITLE_SCALE 0.75f
 #define OPTIONS_SCALE 0.7f
 

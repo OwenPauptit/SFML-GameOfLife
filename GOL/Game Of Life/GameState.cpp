@@ -1,4 +1,5 @@
 #include "GameState.hpp"
+#include "MainMenuState.hpp"
 #include "DEFINITIONS.hpp"
 #include <cstdlib>
 #include <ctime>
@@ -119,6 +120,9 @@ namespace Aesel {
 
 			if (event.type == sf::Event::Closed) {
 				_data->window.close();
+			}
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+				_data->stateMGR.ChangeState(StateRef(new MainMenuState(_data)));
 			}
 
 			/*if (_data->inputMGR.isClick(sf::Mouse::Left, _data->window)) {
